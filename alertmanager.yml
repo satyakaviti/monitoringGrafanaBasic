@@ -1,0 +1,11 @@
+groups:
+- name: example
+  rules:
+  - alert: HighCpuUsage
+    expr: cpu_usage > 5
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: "High CPU usage detected"
+      description: "CPU usage is over 90% for more than 5 minutes"
